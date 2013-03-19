@@ -58,10 +58,7 @@
 //    ini_set('display_errors', 1);
 
         $dbParams = getDbParams();
-
         connect($dbParams['host'], $dbParams['username'], $dbParams['password']);
-
-
         selectDb($dbParams['dbname']);
 
         session_start();
@@ -81,11 +78,6 @@
             echo "<h1>".viewProduct($_GET['product_id'])."</h1>";
             history();
             makeCookies();
-
-
-
-
-
         }
         else if (isset($_GET['Submit']) && $_GET['sort'] && $_GET['order']) {
             createLog();

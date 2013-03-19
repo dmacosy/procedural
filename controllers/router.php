@@ -52,9 +52,11 @@ function __autoload($className)
 }
 //fetch the passed request
 $request = $_SERVER['QUERY_STRING'];
+var_dump($_SERVER['QUERY_STRING']);
 
 //parse the page request and other GET variables
 $parsed = explode('&' , $request);
+//var_dump($parsed);
 
 //the page is the first element
 $page = array_shift($parsed);
@@ -71,6 +73,7 @@ foreach ($parsed as $argument)
 
 //compute the path to the file
 $target = SERVER_ROOT . '/controllers/' . $page . '.php';
+//var_dump($page);
 
 //get target
 if (file_exists($target)){
