@@ -1,21 +1,22 @@
 <?php
 /**
- * Handles the view functionality of our MVC framework
+ * Handles the view functionality
  */
 class View_Model
 {
     /**
-     * Holds variables assigned to template
-     */
-    private $data = array();
-
-    /**
      * Holds render status of view.
+     *
+     * @var bool
      */
     private $render = FALSE;
 
     /**
+     * Constructor
+     *
      * Accept a template to load
+     *
+     * @param string $template
      */
     public function __construct($template)
     {
@@ -34,22 +35,14 @@ class View_Model
     }
 
     /**
-     * Receives assignments from controller and stores in local data array
-     *
-     * @param $variable
-     * @param $value
+     * Render the view
      */
-//    public function assign($variable , $value)
-//    {
-//        $this->data[$variable] = $value;
-//    }
-
-    public function __destruct()
+    public function renderView()
     {
-        //parse data variables into local variables, so that they render to the view
-        $data = $this->data;
 
-        //render view
         include($this->render);
+        $buttons = new Button_Model();
+        $buttons->display();
+
     }
 }
