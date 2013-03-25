@@ -3,6 +3,20 @@
 class Button_Model
 {
 
+    /**
+     * This function includes the logic for the user submission of the login/registration page
+     */
+    public function initDisplay(){
+
+
+
+    }
+
+
+
+    /**
+     * This function is the logic behind the user input buttons and text field on the main page.
+     */
     public function display(){
         $xmlModel = new Xml_Model;
         if(isset($_GET["url"])){
@@ -65,4 +79,6 @@ class Button_Model
             }
         }
     }
+
+
 }

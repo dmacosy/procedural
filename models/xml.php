@@ -1,31 +1,20 @@
 <?php
 
 /**
- *Xml_Model includes all pf the backend logic of this Simple XML exercise
+ *Xml_Model includes all of the backend logic of this Simple XML exercise
  *
  */
 
-class Xml_Model
+class Xml_Model extends Database_Model
 {
 
-    /**
-     * MySql Resource
-     *
-     * @var mixed
-     */
-    protected static $link;
 
-    /**
-     * Database
-     *
-     * @var string
-     */
-    protected static $db;
 
     public function __construct()
     {
 
     }
+
 
     /**
      * Function to display all the url in the history array
@@ -158,6 +147,7 @@ class Xml_Model
 
         $info=mysqli_query(self::$link, $query);
 
+
         $s = '';
         while($result = mysqli_fetch_assoc($info)){
 
@@ -237,32 +227,7 @@ class Xml_Model
         }
     }
 
-    /**
-     * @return MySql resource
-     */
-    public function getLink() {
-        return self::$link;
-    }
 
-    /**
-     * Opens a new connection to MySql
-     *
-     * @param string $host
-     * @param string $user
-     * @param string $pass
-     * @param string $db
-     * @return MySql resource
-     */
-    public function connect($host, $user, $pass, $db) {
-        if(isset(self::$link)) return self::$link;
-        self::$link = mysqli_connect($host, $user, $pass, $db);
-
-        if (!self::$link) {
-            die('Could not connect: ' . mysql_error());
-        }
-        echo '<br /><br />';
-        return self::$link;
-    }
 
     /**
      * Returns the MySql query after accepting parameters to manipulate the ordering, sorting, and limits
@@ -290,26 +255,7 @@ class Xml_Model
 
     }
 
-    /**
-     *Close opened database connection
-     */
-    public function disconnect(){
-        mysqli_close(self::$link);
-    }
 
-    /**
-     * Retrieve the database parameters from /var/www/magento/app/etc/local.xml
-     *
-     * @return array
-     */
-    public function getDbParams(){
-        //$file = $_SERVER['DOCUMENT_ROOT'] . '/magento/app/etc/local.xml';
-        $file= '/var/www/magento/app/etc/local.xml';
-        $dbParams = json_decode(json_encode(simplexml_load_file($file, "SimpleXmlElement", LIBXML_NOCDATA)), true);
-        $dbParams = array_slice($dbParams['global']['resources']['default_setup']['connection'],0, 4);
-
-        return $dbParams;
-    }
 
 
 

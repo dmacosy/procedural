@@ -14,7 +14,8 @@ class Xml_Controller
      * @var string
      */
 
-        public $template = 'xml';
+        public $template = 'login';
+//        public $template = 'xml';
 
 
     /**
