@@ -88,21 +88,45 @@ class Admin_Model extends Database_Model{
 
     }
 
-    public function checkLogin($username,$password){
 
-        $pwdmd5 = md5($password);
-        $query = "SELECT firstname FROM admin_log_users
-                 WHERE email= '{$username}' AND password='{$pwdmd5}'  ";
-        $result=mysqli_query(self::$link, $query);
+    public function checkLogin(){
+        echo '<div style="text-align: center; margin: 25px 500px 0px 550px;  ">';
 
-        $new = mysqli_fetch_assoc($result);
+        if(empty($_POST['username'])){
 
-        if(!isset($new['firstname'])){
-
-            return true;
+            echo "Error:Username is required<br>";
         }
         else{
-            return false;
+            $username=$_POST['username'];
+        }
+        if(empty($_POST['password'])){
+
+            echo "Error: Password required";
+        }
+        else{
+
+            $password=md5($_POST['password']);
+
+        }
+
+        if(isset($username) && isset($password) ){
+            $data=array($username, $password);
+            $query = "SELECT firstname FROM admin_log_users
+                     WHERE email= '$data[0]' AND password='$data[1]'  ";
+
+            $result=mysqli_query(self::$link, $query);
+            $new = mysqli_fetch_assoc($result);
+
+            if(isset($new['firstname'])){
+
+                $_SESSION['loggedIn']=$new['firstname'];
+                //echo "Welcome ";
+                return true;
+            }
+            else{
+                //echo "Invalid username or password. Please try again.";
+                return false;
+            }
         }
     }
 

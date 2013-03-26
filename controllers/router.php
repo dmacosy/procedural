@@ -3,7 +3,9 @@
      * This controller routes all incoming requests to the appropriate controller
      */
 
-
+if(!isset($_SESSION)){
+    session_start();
+}
     /**
      * Automatically includes files containing classes that are called
      *

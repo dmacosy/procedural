@@ -9,7 +9,8 @@ class View_Model
      *
      * @var bool
      */
-    private $render = FALSE;
+    protected $render = false;
+    protected $content = "";
 
     /**
      * Constructor
@@ -21,7 +22,7 @@ class View_Model
     public function __construct($template)
     {
         //compose file name
-        $file = SERVER_ROOT . '/views/' . strtolower($template) . '.php';
+        $file = SERVER_ROOT . '/views/' . strtolower($template) . '.phtml';
 
         if (file_exists($file))
         {
@@ -34,15 +35,21 @@ class View_Model
         }
     }
 
+    public function setContent($content){
+        $this->content = $content;
+    }
+
     /**
      * Render the view
      */
     public function renderView()
     {
-
-        include($this->render);
         $buttons = new Button_Model();
+        $content = $this->content;
+        include($this->render);
         $buttons->display();
-
+        $buttons->initDisplay();
     }
+
+
 }

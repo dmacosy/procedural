@@ -6,13 +6,25 @@ class Button_Model
     /**
      * This function includes the logic for the user submission of the login/registration page
      */
+
     public function initDisplay(){
 
+        $buttons = new Admin_Model();
 
 
+        if(isset($_POST['register'])){
+            $check=$buttons->checkRegIn();
+            if($check==true){
+                $fname=$_POST['fname'];
+                unset($_POST['registered']);
+                echo "$fname, Thank You for registering!!";
+
+            }
+        }
+        else if(isset($_POST['login'])){
+            $buttons->checkLogin();
+        }
     }
-
-
 
     /**
      * This function is the logic behind the user input buttons and text field on the main page.
@@ -41,6 +53,9 @@ class Button_Model
             echo '<div style="text-align: center; margin: 25px 500px 0px 500px;  ">';
             echo "<h1>".$xmlModel->viewProduct($_GET['product_id'])."</h1>";
 
+        }
+        else if(isset($_GET['logout'])){
+            unset($_SESSION['loggedIn']);
         }
         else if (isset($_GET['Submit'])) {
 
