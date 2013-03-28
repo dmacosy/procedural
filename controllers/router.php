@@ -3,9 +3,19 @@
      * This controller routes all incoming requests to the appropriate controller
      */
 
-if(!isset($_SESSION)){
-    session_start();
-}
+
+
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
+//
+//    require_once SERVER_ROOT.'/composer/vendor/twig/lib/Twig/Autoloader.php';
+//    $loader = new Twig_Loader_Filesystem(SERVER_ROOT.'/views');
+//    $twig = new Twig_Environment($loader, array(
+//    'cache' => SERVER_ROOT.'/compilation_cache', ));
+//      Twig_Autoloader::register();
+
     /**
      * Automatically includes files containing classes that are called
      *
@@ -28,15 +38,9 @@ if(!isset($_SESSION)){
 
                 break;
 
-            case 'library':
+            case 'view':
 
-                $folder = '/libraries/';
-
-                break;
-
-            case 'driver':
-
-                $folder = '/libraries/drivers/';
+                $folder = '/view/';
 
                 break;
         }
@@ -58,6 +62,9 @@ if(!isset($_SESSION)){
         }
     }
 
+
+
+
     $page = 'xml';
     //compute the path to the file
     $target = SERVER_ROOT . '/controllers/' . $page . '.php';
@@ -78,7 +85,6 @@ if(!isset($_SESSION)){
         }
         else
         {
-            //did we name our class correctly?
             die('class does not exist!');
         }
     }

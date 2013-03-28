@@ -18,11 +18,16 @@ class Button_Model
                 $fname=$_POST['fname'];
                 unset($_POST['registered']);
                 echo "$fname, Thank You for registering!!";
-
             }
         }
         else if(isset($_POST['login'])){
-            $buttons->checkLogin();
+            $check=$buttons->checkLogin();
+            //var_dump($buttons->checkLogin());
+            if($check==true){
+                $back = $_SERVER['HTTP_REFERER'];
+                header("Location: $back");
+            }
+
         }
     }
 
@@ -56,6 +61,7 @@ class Button_Model
         }
         else if(isset($_GET['logout'])){
             unset($_SESSION['loggedIn']);
+            header("Location: http://procedural.dev/index.php?");
         }
         else if (isset($_GET['Submit'])) {
 
@@ -94,6 +100,4 @@ class Button_Model
             }
         }
     }
-
-
 }

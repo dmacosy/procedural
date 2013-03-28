@@ -2,8 +2,6 @@
 
 class Admin_Model extends Database_Model{
 
-
-
     /**
      * This function takes user registration input and add it to the data base if every thing checks out
      *
@@ -64,7 +62,6 @@ class Admin_Model extends Database_Model{
         }
     }
 
-
     /**
      * Function takes the user inputed email as a parameter to check it against the database
      * @param $email
@@ -88,9 +85,14 @@ class Admin_Model extends Database_Model{
 
     }
 
-
+    /**
+     * This function first make sure that the fields are not empty then checks the
+     * username and password provided against the database
+     *
+     * @return bool
+     */
     public function checkLogin(){
-        echo '<div style="text-align: center; margin: 25px 500px 0px 550px;  ">';
+        echo '<div style="text-align: center;  ">';
 
         if(empty($_POST['username'])){
 
@@ -120,14 +122,14 @@ class Admin_Model extends Database_Model{
             if(isset($new['firstname'])){
 
                 $_SESSION['loggedIn']=$new['firstname'];
-                //echo "Welcome ";
+                //echo "Welcome {$_SESSION['loggedIn']}<br><br>";
+                //echo '<INPUT TYPE="button" onClick="history.go(0)" VALUE="Continue">';
                 return true;
             }
             else{
-                //echo "Invalid username or password. Please try again.";
+                echo "Invalid username or password. Please try again.";
                 return false;
             }
         }
     }
-
 }

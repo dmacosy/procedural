@@ -56,7 +56,6 @@ class Database_Model{
      * @return array
      */
     public function getDbParams(){
-        //$file = $_SERVER['DOCUMENT_ROOT'] . '/magento/app/etc/local.xml';
         $file= '/var/www/magento/app/etc/local.xml';
         $dbParams = json_decode(json_encode(simplexml_load_file($file, "SimpleXmlElement", LIBXML_NOCDATA)), true);
         $dbParams = array_slice($dbParams['global']['resources']['default_setup']['connection'],0, 4);

@@ -26,30 +26,37 @@ class View_Model
 
         if (file_exists($file))
         {
-            /**
-             * trigger render to include file when this model is destroyed
-             * if we render it now, we wouldn't be able to assign variables
-             * to the view!
-             */
             $this->render = $file;
         }
     }
 
+    /**
+     * Function to set the content to be displayed within the view template
+     *
+     * @param $content
+     */
     public function setContent($content){
         $this->content = $content;
     }
 
     /**
-     * Render the view
+     * Function to return the content value
+     *
+     * @return string
+     */
+    public function getContent(){
+        return $this->content;
+    }
+
+    /**
+     * Render the view and include button logic
      */
     public function renderView()
     {
         $buttons = new Button_Model();
-        $content = $this->content;
+        $content = $this->getContent();
         include($this->render);
         $buttons->display();
         $buttons->initDisplay();
     }
-
-
 }

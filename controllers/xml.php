@@ -13,10 +13,7 @@ class Xml_Controller
      *
      * @var string
      */
-
-        public $template='template';
-//        public $template = 'xml';
-
+     public $template='template';
 
     /**
      * Main controller function to connect the model and view classes
@@ -24,14 +21,18 @@ class Xml_Controller
      * Render view and create log file for today
      */
     public function main(){
+//        require_once  'lib / Twig / Autoloader.php' ;
+//        Twig_Autoloader :: register ();
+//        $ Loader  = new  Twig_Loader_Filesystem ( 'views' );
+//        $ Twig  = new  Twig_Environment ( $ loader , array (
+//            'Cache'  => 'cache' ,
+//            'Debug'  => 'true'
+//        ));
 
         $xmlModel = new Xml_Model;
         $view = new View_Model($this->template);
-        $admin = new Admin_Model();
         $dbParams =  $xmlModel->getDbParams();
         $xmlModel->connect($dbParams['host'], $dbParams['username'], $dbParams['password'], $dbParams['dbname']);
-
-        //var_dump($_SESSION['loggedIn']);
 
         if(!isset($_SESSION['loggedIn'])){
             $view->setContent(SERVER_ROOT . '/views/' . 'login' . '.phtml');
@@ -41,8 +42,6 @@ class Xml_Controller
             $view->setContent(SERVER_ROOT . '/views/' . 'xml' . '.phtml');
             $view->renderView();
         }
-
-
 
         $xmlModel->createLog();
         $xmlModel->addToTable();

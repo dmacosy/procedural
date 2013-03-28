@@ -23,34 +23,27 @@ class Xml_Model extends Database_Model
         echo '<div style="text-align: center; margin: 25px 500px 0px 500px;  ">';
 
         if(isset($_SESSION['history'])){
-
             foreach($_SESSION['history']as $value){
-                echo '<tr>';
-                echo '<td style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">Session</td>';
-                echo '<td style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">'.$value.'</td>';
+                echo '<tr style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">';
+                echo '<td>Session</td>';
+                echo '<td>'.$value.'</td>';
                 echo '</tr>';
-
-               // echo $value."<br>";
-
             }
             if(sizeof($_SESSION['history'])!=5){
                 for($i=sizeof($_SESSION['history']); $i<5;$i++){
-                    echo '<tr>';
-                    echo '<td style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">Cookie#'.$i.'</td>';
-                    echo '<td style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">'.$_COOKIE["cookie$i"].'</td>';
+                    echo '<tr style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">';
+                    echo '<td>Cookie#'.$i.'</td>';
+                    echo '<td>'.$_COOKIE["cookie$i"].'</td>';
                     echo '</tr>';
-                    //echo "Cookie #$i: ".$_COOKIE["cookie$i"]."<br>";
                 }
             }
         }
         else{
-
             for($i=0; $i<5;$i++){
-                echo '<tr>';
-                echo '<td style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">Cookie#'.$i.'</td>';
-                echo '<td style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">'.$_COOKIE["cookie$i"].'</td>';
+                echo '<tr style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">';
+                echo '<td>Cookie#'.$i.'</td>';
+                echo '<td>'.$_COOKIE["cookie$i"].'</td>';
                 echo '</tr>';
-                //echo "Cookie #$i: ".$_COOKIE["cookie$i"]."<br>";
             }
 
         }
@@ -66,7 +59,6 @@ class Xml_Model extends Database_Model
             $month = "-{$month}-*.txt";
 
             if (count(glob("history/*{$month}"))==0){
-
                 $date=date("F", mktime(0, 0, 0, $_GET['month']));
                 echo "There are no log files for the month of $date. ";
             }
@@ -85,6 +77,7 @@ class Xml_Model extends Database_Model
      * created if its not already there
      */
     public function createLog(){
+
         if(!is_dir(getcwd().'/history')){
             mkdir(getcwd().'/history');
         }
@@ -124,8 +117,6 @@ class Xml_Model extends Database_Model
         if(count($_SESSION['history']) > 5) {
             unset($_SESSION['history'][5]);
         }
-
-
         return $_SESSION['history'];
 
     }
@@ -158,9 +149,10 @@ class Xml_Model extends Database_Model
 
     public function addToTable(){
 
-
         $data=array(date('Y:m:d'),$_SERVER['REMOTE_ADDR'],$_SERVER['REQUEST_URI'], session_id());
-        $query="INSERT INTO admin_log (date, ip_address, url,session_id) VALUES ('$data[0]', '$data[1]', '$data[2]', '$data[3]')";
+
+        $query="INSERT INTO admin_log (date, ip_address, url,session_id)
+                VALUES ('$data[0]', '$data[1]', '$data[2]', '$data[3]')";
 
         mysqli_query(self::$link, $query);
 
@@ -205,7 +197,6 @@ class Xml_Model extends Database_Model
         }
     }
 
-
     /**
      * Returns the method in with the database is ordered by: name or product id
      *
@@ -226,8 +217,6 @@ class Xml_Model extends Database_Model
             }
         }
     }
-
-
 
     /**
      * Returns the MySql query after accepting parameters to manipulate the ordering, sorting, and limits
@@ -250,13 +239,7 @@ class Xml_Model extends Database_Model
               ORDER BY {$orderBy} {$list}
               LIMIT 0,$limit";
 
-
         return $query;
 
     }
-
-
-
-
-
 }

@@ -1,10 +1,5 @@
 <?php
-
-
-
 define('SERVER_ROOT' , '/var/www/procedural');
-
-
 define('SITE_ROOT' , 'http://procedural.dev');
 
 /**
