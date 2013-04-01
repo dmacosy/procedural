@@ -1,6 +1,7 @@
 <?php
 
-class Admin_Model extends Database_Model{
+
+class Admin_Model extends Database_Model {
 
     /**
      * This function takes user registration input and add it to the data base if every thing checks out
@@ -8,38 +9,36 @@ class Admin_Model extends Database_Model{
      * @return bool
      */
     public function checkRegIn(){
-        echo '<div style="text-align: center; margin: 25px 500px 0px 550px;  ">';
 
         if(empty($_POST['fname'])){
-            unset($_POST['registered']);
-            echo "Error:First Name is required<br>";
+            Error_Model::getInstance()->setError(Error_Model::ERROR_100);
         }
         else{
             $firstname=$_POST['fname'];
         }
         if(empty($_POST['lname'])){
-            unset($_POST['registered']);
-            echo "Error:Last Name is required<br>";
+            Error_Model::getInstance()->setError(Error_Model::ERROR_101);
         }
         else{
 
             $lastname=$_POST['lname'];
         }
-        if(empty($_POST['email'])){
-            unset($_POST['registered']);
-            echo "Error:Email is required<br>";
+        if(empty($_POST['email'])|| !preg_match('/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/',$_POST['email'])){
+
+            Error_Model::getInstance()->setError(Error_Model::ERROR_102);
         }
         else{
             $email=$_POST['email'];
         }
         if(empty($_POST['regPassword'])){
-            unset($_POST['registered']);
-            echo "Error:Password is required<br>";
+            Error_Model::getInstance()->setError(Error_Model::ERROR_103);
         }
         else{
             $password=$_POST['regPassword'];
             $pwdmd5 = md5($password);
         }
+
+       Error_Model::getInstance()->getError();
 
         if(isset($firstname) && isset($lastname) && isset($email) && isset($pwdmd5)){
 
@@ -52,14 +51,15 @@ class Admin_Model extends Database_Model{
                 return true;
             }
             else{
-                unset($_POST['registered']);
-                echo "Error:The email address provided is already in use. Please provide a new email email address.<br>";
-                return false;
+                Error_Model::getInstance()->setError(Error_Model::ERROR_104);
+                die(Error_Model::getInstance()->getError());
+
             }
         }
         else{
             return false;
         }
+
     }
 
     /**
@@ -92,18 +92,17 @@ class Admin_Model extends Database_Model{
      * @return bool
      */
     public function checkLogin(){
-        echo '<div style="text-align: center;  ">';
 
         if(empty($_POST['username'])){
 
-            echo "Error:Username is required<br>";
+            Error_Model::getInstance()->setError(Error_Model::ERROR_200);
         }
         else{
             $username=$_POST['username'];
         }
         if(empty($_POST['password'])){
 
-            echo "Error: Password required";
+            Error_Model::getInstance()->setError(Error_Model::ERROR_201);
         }
         else{
 
@@ -122,14 +121,13 @@ class Admin_Model extends Database_Model{
             if(isset($new['firstname'])){
 
                 $_SESSION['loggedIn']=$new['firstname'];
-                //echo "Welcome {$_SESSION['loggedIn']}<br><br>";
-                //echo '<INPUT TYPE="button" onClick="history.go(0)" VALUE="Continue">';
                 return true;
             }
             else{
-                echo "Invalid username or password. Please try again.";
-                return false;
+                Error_Model::getInstance()->setError(Error_Model::ERROR_202);
+                die(Error_Model::getInstance()->getError());
             }
         }
+        Error_Model::getInstance()->getError();
     }
 }

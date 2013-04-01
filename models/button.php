@@ -22,7 +22,6 @@ class Button_Model
         }
         else if(isset($_POST['login'])){
             $check=$buttons->checkLogin();
-            //var_dump($buttons->checkLogin());
             if($check==true){
                 $back = $_SERVER['HTTP_REFERER'];
                 header("Location: $back");
@@ -37,25 +36,26 @@ class Button_Model
     public function display(){
         $xmlModel = new Xml_Model;
         if(isset($_GET["url"])){
-            echo '<div style="text-align: center; margin: 25px 500px 0px 550px;  ">';
-            echo '<table cellpadding="3" cellspacing="5" style="margin:auto">';
-            echo '<tr>
-            <th style="font-size: 14px; font-weight: normal;  padding: 10px 8px; border-bottom: 4px solid #039;" scope="col">Display Type</th>
-            <th style="font-size: 14px; font-weight: normal;  padding: 10px 8px; border-bottom: 4px solid #039;" scope="col">URL</th>
-         </tr>';
+
+            echo '<table cellpadding="3" cellspacing="5" style="margin:auto">
+                  <tr>
+                  <th style="font-size: 14px; font-weight: normal;  padding: 10px 8px; border-bottom: 4px solid #039;" scope="col">Display Type</th>
+                  <th style="font-size: 14px; font-weight: normal;  padding: 10px 8px; border-bottom: 4px solid #039;" scope="col">URL</th>
+                  </tr>';
 
             $xmlModel->showUrl();
 
+
         }
         else if(isset($_GET["logFiles"])){
-            echo '<div style="text-align: center; margin: 25px 500px 0px 500px;  ">';
+
             $xmlModel->listFiles();
         }
         else if(isset($_GET['product_id']) && is_numeric($_GET['product_id'])){
 
             $xmlModel->createLog();
             $xmlModel->addToTable();
-            echo '<div style="text-align: center; margin: 25px 500px 0px 500px;  ">';
+
             echo "<h1>".$xmlModel->viewProduct($_GET['product_id'])."</h1>";
 
         }
@@ -66,8 +66,10 @@ class Button_Model
         else if (isset($_GET['Submit'])) {
 
             if(!(isset($_GET['order']) && isset($_GET['sort']))){
-                echo '<div style="text-align: center; margin: 25px 500px 0px 500px;  ">';
-                echo "You must choose the sorting object and ordering method!!";
+
+                Error_Model::getInstance()->setError(Error_Model::ERROR_300);
+                die(Error_Model::getInstance()->getError());
+
 
             }
             else{
@@ -80,22 +82,23 @@ class Button_Model
 
                 $s=mysqli_query($xmlModel->getLink(), $xmlModel->sql($_SESSION['order'], $_SESSION['sort'],$_SESSION['limit']));
 
-                echo '<div style="text-align: center; margin: 25px 500px 0px 550px;  ">';
-                echo '<table cellpadding="3" cellspacing="5" style="margin:auto">';
-                echo '<tr>
-                <th style="font-size: 14px; font-weight: normal;  padding: 10px 8px; border-bottom: 4px solid #039;" scope="col">Product #</th>
-                <th style="font-size: 14px; font-weight: normal;  padding: 10px 8px; border-bottom: 4px solid #039;" scope="col">Website</th>
-                <th style="font-size: 14px; font-weight: normal;  padding: 10px 8px; border-bottom: 4px solid #039;" scope="col">Product Name</th><th>
-              </tr>';
+
+                echo '<table cellpadding="3" cellspacing="5" style="margin:auto">
+                      <tr>
+                      <th style="font-size: 14px; font-weight: normal;  padding: 10px 8px; border-bottom: 4px solid #039;" scope="col">Product #</th>
+                      <th style="font-size: 14px; font-weight: normal;  padding: 10px 8px; border-bottom: 4px solid #039;" scope="col">Website</th>
+                      <th style="font-size: 14px; font-weight: normal;  padding: 10px 8px; border-bottom: 4px solid #039;" scope="col">Product Name</th><th>
+                      </tr>';
 
                 while($info = mysqli_fetch_assoc($s)){
-                    echo '<tr>';
-                    echo '<td style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">'.$info['product_id'].
-                        '</td><td>'. $info['name']. '</td><td>'.'<a href="http://procedural.dev/index.php?product_id='.$info['product_id'].'">'.$info['value'].'</a></td>';
-                    echo '</tr>';
+                    echo '<tr>
+                          <td style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">'.$info['product_id'].'</td>
+                          <td>'. $info['name']. '</td>
+                          <td>'.'<a href="http://procedural.dev/index.php?product_id='.$info['product_id'].'">'.$info['value'].'</a></td>
+                          </tr>';
                 }
                 echo '</table><br />';
-                echo '</div>';
+
 
             }
         }

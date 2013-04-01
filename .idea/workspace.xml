@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/models/xml.php" line="143" />
+    <bookmark url="file://$PROJECT_DIR$/models/xml.php" line="144" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b81b38b-fea6-4b6f-8505-d0018524435e" name="Default" comment="" />
@@ -10,6 +10,12 @@
     <file path="/view.php" changelist="4b81b38b-fea6-4b6f-8505-d0018524435e" time="1364398236353" ignored="false" />
     <file path="/router.php" changelist="4b81b38b-fea6-4b6f-8505-d0018524435e" time="1364407825940" ignored="false" />
     <file path="/xml.php" changelist="4b81b38b-fea6-4b6f-8505-d0018524435e" time="1364412966264" ignored="false" />
+    <file path="/admin.php" changelist="4b81b38b-fea6-4b6f-8505-d0018524435e" time="1364840336737" ignored="false" />
+    <file path="/button.php" changelist="4b81b38b-fea6-4b6f-8505-d0018524435e" time="1364479605708" ignored="false" />
+    <file path="/template.phtml" changelist="4b81b38b-fea6-4b6f-8505-d0018524435e" time="1364479575131" ignored="false" />
+    <file path="/error.php" changelist="4b81b38b-fea6-4b6f-8505-d0018524435e" time="1364843945339" ignored="false" />
+    <file path="/login.phtml" changelist="4b81b38b-fea6-4b6f-8505-d0018524435e" time="1364828923095" ignored="false" />
+    <file path="/xml.phtml" changelist="4b81b38b-fea6-4b6f-8505-d0018524435e" time="1364842866173" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +37,68 @@
     <favorites_list name="procedural" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="admin.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="0" selection-start="721" selection-end="721" vertical-scroll-proportion="-1.083151">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="button.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/button.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="96" column="26" selection-start="3463" selection-end="3463" vertical-scroll-proportion="-14.722222">
+              <folding>
+                <marker date="1364845856086" expanded="true" signature="1014:1025" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="1026:1362" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="1049:1362" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="1049:1362" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="1080:1168" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="1229:1317" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="2640:2651" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="2652:2670" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="2652:3162" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="2679:3162" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="2679:3162" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="2714:2802" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="2864:2952" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="3012:3100" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="3134:3157" placeholder="..." />
+                <marker date="1364845856086" expanded="true" signature="3251:3277" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xml.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/xml.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="7.240741">
+              <folding>
+                <element signature="e#7#91#0" expanded="true" />
+                <marker date="1364845466642" expanded="true" signature="419:480" placeholder="..." />
+                <marker date="1364845466642" expanded="true" signature="739:819" placeholder="..." />
+                <marker date="1364845466642" expanded="true" signature="756:817" placeholder="..." />
+                <marker date="1364845466642" expanded="true" signature="1086:1147" placeholder="..." />
+                <marker date="1364845466642" expanded="true" signature="1148:1166" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/login.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="12" selection-start="266" selection-end="266" vertical-scroll-proportion="-2.6153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -41,22 +108,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/simpleXML.php" />
-        <option value="$PROJECT_DIR$/views/test.php" />
         <option value="$PROJECT_DIR$/views/template.php" />
         <option value="$PROJECT_DIR$/views/xml.php" />
         <option value="$PROJECT_DIR$/views/login.php" />
-        <option value="$PROJECT_DIR$/views/xml.phtml" />
-        <option value="$PROJECT_DIR$/models/button.php" />
         <option value="$PROJECT_DIR$/composer/composer.json" />
-        <option value="$PROJECT_DIR$/views/login.phtml" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/models/view.php" />
         <option value="$PROJECT_DIR$/models/database.php" />
-        <option value="$PROJECT_DIR$/models/admin.php" />
         <option value="$PROJECT_DIR$/controllers/router.php" />
         <option value="$PROJECT_DIR$/controllers/xml.php" />
+        <option value="$PROJECT_DIR$/views/template.phtml" />
+        <option value="$PROJECT_DIR$/views/xml.phtml" />
+        <option value="$PROJECT_DIR$/models/error.php" />
         <option value="$PROJECT_DIR$/models/xml.php" />
+        <option value="$PROJECT_DIR$/models/button.php" />
+        <option value="$PROJECT_DIR$/views/login.phtml" />
+        <option value="$PROJECT_DIR$/models/admin.php" />
       </list>
     </option>
   </component>
@@ -66,6 +133,39 @@
     <option name="y" value="28" />
     <option name="width" value="1920" />
     <option name="height" value="1052" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Spelling</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Spelling</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -112,6 +212,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="procedural" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="procedural" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="procedural" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="procedural" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -119,11 +247,11 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.lookFeel" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="Errors" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/composer" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -133,10 +261,13 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.simpleXML.php">
+  <component name="RunManager" selected="PHP Script.admin.php">
     <configuration default="false" name="simpleXML.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/simpleXML.php">
       <RunnerSettings RunnerId="PhpScriptDebugRunner" />
       <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="admin.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/models/admin.php">
       <method />
     </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -146,12 +277,14 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="PHP Script.simpleXML.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.admin.php" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="PHP Script.simpleXML.php" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.admin.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.simpleXML.php" />
       </list>
     </recent_temporary>
   </component>
@@ -184,13 +317,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="28" width="1920" height="1052" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18333334" sideWeight="0.9509018" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18333334" sideWeight="0.9509018" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39848813" sideWeight="0.49786097" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39956802" sideWeight="0.4983957" order="8" side_tool="true" content_ui="tabs" />
@@ -264,139 +397,40 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="25" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="phar://$PROJECT_DIR$/composer/composer.phar/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="phar://$PROJECT_DIR$/composer/composer.phar/vendor/composer/autoload_classmap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="phar://$PROJECT_DIR$/composer/composer.phar/vendor/composer/autoload_namespaces.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="phar://$PROJECT_DIR$/composer/composer.phar/vendor/composer/ClassLoader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/button.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1364393578493" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364393578493" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/simpleXML.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1363721522502" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1363721522502" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1363721522502" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1363721522502" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1363721522502" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1363721522502" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1363721522502" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1363721522502" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1363721522502" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1363721522502" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1363721522502" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="1" selection-start="1444" selection-end="1444" vertical-scroll-proportion="-32.307693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="5" selection-start="1213" selection-end="1213" vertical-scroll-proportion="-31.653847">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/router.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="175" selection-end="175" vertical-scroll-proportion="-6.5384617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="7" selection-start="2099" selection-end="2099" vertical-scroll-proportion="-22.884615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/template.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/xml.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="55" selection-start="43" selection-end="91" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/xml.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="25" selection-start="1322" selection-end="1322" vertical-scroll-proportion="-26.807692">
-          <folding>
-            <marker date="1364417451956" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364417451956" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1364417451956" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1364417451956" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="12" column="6" selection-start="175" selection-end="175" vertical-scroll-proportion="-6.5384617" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/xml.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="520" selection-end="827" vertical-scroll-proportion="0.4044586">
-          <folding />
-        </state>
+        <state line="23" column="0" selection-start="520" selection-end="827" vertical-scroll-proportion="0.4044586" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
@@ -406,13 +440,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.8842887">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="14" selection-start="730" selection-end="732" vertical-scroll-proportion="-25.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/template.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="203" selection-end="203" vertical-scroll-proportion="-5.8846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/xml.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="96" selection-start="1091" selection-end="1091" vertical-scroll-proportion="-13.730769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="5" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.7653928">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="12" selection-start="266" selection-end="266" vertical-scroll-proportion="-2.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/button.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="26" selection-start="3463" selection-end="3463" vertical-scroll-proportion="-14.722222">
+          <folding>
+            <marker date="1364845856086" expanded="true" signature="1014:1025" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="1026:1362" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="1049:1362" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="1049:1362" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="1080:1168" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="1229:1317" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="2640:2651" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="2652:2670" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="2652:3162" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="2679:3162" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="2679:3162" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="2714:2802" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="2864:2952" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="3012:3100" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="3134:3157" placeholder="..." />
+            <marker date="1364845856086" expanded="true" signature="3251:3277" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/xml.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="7.240741">
+          <folding>
+            <element signature="e#7#91#0" expanded="true" />
+            <marker date="1364845466642" expanded="true" signature="419:480" placeholder="..." />
+            <marker date="1364845466642" expanded="true" signature="739:819" placeholder="..." />
+            <marker date="1364845466642" expanded="true" signature="756:817" placeholder="..." />
+            <marker date="1364845466642" expanded="true" signature="1086:1147" placeholder="..." />
+            <marker date="1364845466642" expanded="true" signature="1148:1166" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="5" selection-start="3837" selection-end="3837" vertical-scroll-proportion="2.4002123">
-          <folding>
-            <marker date="1364398799889" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1364398799889" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state line="26" column="0" selection-start="721" selection-end="721" vertical-scroll-proportion="-1.083151">
+          <folding />
         </state>
       </provider>
     </entry>

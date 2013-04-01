@@ -20,30 +20,29 @@ class Xml_Model extends Database_Model
      * Function to display all the url in the history array
      */
     public function showUrl(){
-        echo '<div style="text-align: center; margin: 25px 500px 0px 500px;  ">';
 
         if(isset($_SESSION['history'])){
             foreach($_SESSION['history']as $value){
-                echo '<tr style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">';
-                echo '<td>Session</td>';
-                echo '<td>'.$value.'</td>';
-                echo '</tr>';
+               echo '<tr style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">
+                     <td>Session</td>
+                     <td>'.$value.'</td>
+                     </tr>';
             }
             if(sizeof($_SESSION['history'])!=5){
                 for($i=sizeof($_SESSION['history']); $i<5;$i++){
-                    echo '<tr style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">';
-                    echo '<td>Cookie#'.$i.'</td>';
-                    echo '<td>'.$_COOKIE["cookie$i"].'</td>';
-                    echo '</tr>';
+                    echo '<tr style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">
+                          <td>Cookie#'.$i.'</td>
+                          <td>'.$_COOKIE["cookie$i"].'</td>
+                          </tr>';
                 }
             }
         }
         else{
             for($i=0; $i<5;$i++){
-                echo '<tr style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">';
-                echo '<td>Cookie#'.$i.'</td>';
-                echo '<td>'.$_COOKIE["cookie$i"].'</td>';
-                echo '</tr>';
+                echo '<tr style="border-bottom: 2px solid #ccc; color: #669; padding: 6px 8px;">
+                      <td>Cookie#'.$i.'</td>
+                      <td>'.$_COOKIE["cookie$i"].'</td>
+                      </tr>';
             }
 
         }
@@ -60,7 +59,8 @@ class Xml_Model extends Database_Model
 
             if (count(glob("history/*{$month}"))==0){
                 $date=date("F", mktime(0, 0, 0, $_GET['month']));
-                echo "There are no log files for the month of $date. ";
+                Error_Model::getInstance()->setError(Error_Model::ERROR_302);
+                die(Error_Model::getInstance()->getError(). " $date");
             }
 
             foreach (glob("history/*{$month}") as $filename) {
@@ -68,7 +68,8 @@ class Xml_Model extends Database_Model
             }
         }
         else{
-            echo "No month was chosen.";
+            Error_Model::getInstance()->setError(Error_Model::ERROR_301);
+            die(Error_Model::getInstance()->getError());
         }
     }
 
